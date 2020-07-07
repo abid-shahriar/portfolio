@@ -1,0 +1,29 @@
+.footer-section {
+  height: 18rem;
+  width: 100%;
+  background-color: var(--dark);
+  @include flexCenter;
+  flex-direction: column;
+
+  p {
+    &:first-child {
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1px rgba(255, 255, 255, 0.315) solid;
+    margin-top: 0.5rem;
+    display: inline-block;
+    color: #eee;
+    transition: 0.3s;
+    font-size: 1.5rem;
+
+    &:hover {
+      background-color: var(--blue);
+    }
+  }
+}

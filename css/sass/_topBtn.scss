@@ -1,0 +1,21 @@
+.top-btn {
+  a {
+    text-decoration: none;
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--highlight);
+    z-index: 1000000;
+    font-size: 3rem;
+    color: white;
+    opacity: 0;
+    transform: scale(0);
+    transition: 0.5s;
+  }
+}
+
+.show-btn {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+}

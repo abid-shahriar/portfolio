@@ -1,0 +1,48 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --dark: #020d19;
+  --white: #eee;
+  --highlight: rgb(25, 214, 0);
+  --blue: rgb(30, 153, 224);
+  --sayan: rgb(63, 82, 110);
+  --dark-sayan: #001628;
+  --sayan-green: rgb(58, 110, 119);
+  --black: #000;
+  --orange-red: rgb(247, 62, 62);
+  --orange: rgb(248, 164, 7);
+  --pink: rgb(224, 41, 169);
+  --shadow: 0.1rem 0.1rem 4rem rgba(0, 0, 0, 0.3);
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  // background-color: #020d19;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+  background-color: var(--dark);
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background-color: var(--highlight);
+}
+
+::selection {
+  color: black;
+  background-color: var(--highlight);
+}

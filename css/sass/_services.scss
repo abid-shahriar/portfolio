@@ -1,0 +1,133 @@
+.servces-section {
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+  @include flexCenter;
+  border-top: 5px var(--black) solid;
+  border-bottom: 5px var(--black) solid;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  overflow: hidden;
+  background: linear-gradient(to left, #0f2027, #203a43, #2c5364);
+
+  @include respond(tab-port) {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .my-strongpoint {
+    width: 100%;
+    margin: 0 3rem;
+    border-radius: 3px;
+
+    @include respond(tab-port) {
+      margin: 0;
+    }
+
+    h3 {
+      text-align: center;
+    }
+
+    span {
+      text-align: center;
+      display: block;
+      margin: 1rem auto 5rem;
+
+      @include respond(tab-port) {
+        margin: 1rem auto 2rem;
+      }
+    }
+
+    .my-strongpoint__section {
+      width: 100%;
+      @include flexCenter;
+      justify-content: space-evenly;
+      padding: 4rem 0;
+      border-radius: 3px;
+      // background-color: var(--sayan);
+      // box-shadow: var(--shadow);
+
+      @include respond(tab-port) {
+        flex-direction: column;
+        background-color: transparent;
+      }
+
+      h4 {
+        color: white;
+        @include respond(tab-port) {
+          font-size: 3.5rem;
+        }
+      }
+
+      p {
+        @include respond(tab-port) {
+          font-size: 2rem;
+        }
+      }
+
+      .fast,
+      .responsive,
+      .semantic,
+      .dynamic {
+        @include flexCenter;
+        color: white;
+        flex-direction: column;
+        padding: 1rem;
+        height: 20rem;
+        width: 30rem;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        background-color: var(--sayan);
+        border-radius: 3px;
+        box-shadow: var(--shadow);
+        position: relative;
+        overflow: hidden;
+
+        &:hover::before {
+          animation: shine 0.3s linear backwards;
+        }
+
+        &::before {
+          content: "";
+          height: 100%;
+          width: 2rem;
+          background-color: #fff;
+          position: absolute;
+          transform: skew(30deg);
+          filter: blur(2rem);
+          top: 0;
+          left: 0;
+          visibility: hidden;
+        }
+
+        @include respond(tab-port) {
+          width: 90%;
+        }
+
+        &:not(:first-child) {
+          padding-top: 4rem;
+        }
+
+        &:not(:last-child) {
+          @include respond(tab-port) {
+            margin-bottom: 1rem;
+          }
+        }
+      }
+
+      .dynamic-icon,
+      .responsive-icon,
+      .semantic-icon,
+      .fast-icon {
+        display: block;
+        height: 4rem;
+        width: 4rem;
+        margin-left: -1rem;
+        margin-bottom: -1rem;
+        transform: scale(2);
+        transform-origin: left;
+        fill: white;
+        text-align: center;
+      }
+    }
+  }
+}

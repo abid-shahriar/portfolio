@@ -1,0 +1,172 @@
+header {
+  min-height: 93vh;
+  @include flexCenter();
+  background-color: var(--dark);
+  color: var(--white);
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  overflow: hidden;
+  animation: header-bg 4s linear infinite;
+
+  @include respond(phone) {
+    min-height: 60vh;
+    padding-top: 5rem;
+  }
+
+  .text {
+    @include flexCenter();
+    flex-direction: column;
+    h1 {
+      font-size: 4.2rem;
+      font-weight: 400;
+      text-align: center;
+      position: relative;
+      z-index: 100;
+
+      @include respond(tab-port) {
+        font-size: 4rem;
+      }
+
+      @include respond(phone) {
+        font-size: 3rem;
+      }
+
+      .highlight {
+        color: var(--highlight);
+        font-weight: 600;
+        font-family: inherit;
+      }
+
+      .h1__top {
+        display: inline-block;
+      }
+
+      .h1__bottom {
+        display: inline-block;
+      }
+    }
+
+    .header__btn {
+      font-family: inherit;
+      font-size: 2rem;
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      color: var(--white);
+      border: 2px var(--white) solid;
+      background-color: transparent;
+      transition: background-color, border, 0.5s;
+      position: relative;
+      z-index: 2;
+      text-decoration: none;
+
+      @include respond(phone) {
+        font-size: 1.6rem;
+        padding: 0.5rem 1rem;
+      }
+
+      &:focus {
+        outline: none;
+      }
+      &:active {
+        outline: none;
+        transform: translateY(3px);
+      }
+
+      &:hover {
+        background-color: var(--blue);
+        border: 2px var(--blue) solid;
+        cursor: pointer;
+      }
+
+      .header-icon {
+        display: inline-block;
+        margin-left: 0.8rem;
+        transition: transform 0.5s;
+      }
+
+      &:hover .header-icon {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
+
+.header-bg {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  @include respond(phone) {
+    display: none;
+  }
+}
+
+.header-bg span {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  border: 3px var(--white) solid;
+  background: transparent;
+  position: absolute;
+  animation: header-bg-animation 15s linear infinite backwards;
+}
+
+.header-bg span:nth-child(1) {
+  top: 2%;
+  left: 5%;
+  animation-delay: -8s;
+  border-color: red;
+}
+.header-bg span:nth-child(2) {
+  top: 50%;
+  left: 30%;
+  animation-delay: -5s;
+  border-color: rgb(8, 23, 240);
+}
+.header-bg span:nth-child(3) {
+  top: 30%;
+  left: 20%;
+  animation-delay: -1s;
+  border-color: rgb(50, 226, 6);
+}
+.header-bg span:nth-child(4) {
+  top: 70%;
+  left: 10%;
+  animation-delay: -4s;
+  border-color: rgb(245, 34, 217);
+}
+.header-bg span:nth-child(5) {
+  top: 9%;
+  left: 42%;
+  animation-delay: -6s;
+  border-color: rgb(76, 94, 255);
+}
+.header-bg span:nth-child(6) {
+  top: 45%;
+  left: 80%;
+  animation-delay: -1s;
+  border-color: rgb(255, 255, 3);
+}
+.header-bg span:nth-child(7) {
+  top: 20%;
+  left: 80%;
+  animation-delay: 0s;
+  border-color: rgb(28, 253, 253);
+}
+.header-bg span:nth-child(8) {
+  top: 65%;
+  left: 100%;
+  animation-delay: -3s;
+  border-color: var(--white);
+}
+.header-bg span:nth-child(9) {
+  top: 10%;
+  left: 110%;
+  animation-delay: -5s;
+  border-color: rgb(247, 4, 247);
+}
+.header-bg span:nth-child(10) {
+  top: 75%;
+  left: 60%;
+  animation-delay: -7s;
+  border-color: rgb(240, 67, 5);
+}

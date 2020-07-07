@@ -1,0 +1,148 @@
+nav {
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  transition: 2s;
+  @include respond(tab-port) {
+    position: absolute;
+    z-index: 10000;
+    top: 0;
+  }
+
+  .nav-container {
+    width: 100%;
+    background-color: var(--dark-sayan);
+    @include flexCenter();
+    justify-content: space-between;
+    border-bottom: 3px var(--highlight) solid;
+    position: relative;
+
+    @include respond(tab-port) {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .menu-item {
+      @include flexCenter;
+      text-align: left;
+      transition: max-height 1.2s ease-in-out;
+      transition-timing-function: cubic-bezier(0.22, 0.68, 0, 1, 0.71);
+      max-height: auto;
+
+      @include respond(tab-port) {
+        flex-direction: column;
+        align-items: flex-start;
+        max-height: 0;
+        overflow: hidden;
+      }
+
+      li {
+        margin: 1.5rem 0rem 1.5rem 4rem;
+        list-style: none;
+
+        @include respond(tab-port) {
+          margin: 1.5rem 0rem 1.5rem 2rem;
+        }
+
+        a {
+          display: inline-block;
+          &:visited,
+          &:link {
+            text-decoration: none;
+            font-size: 2rem;
+            color: var(--white);
+            font-weight: 600;
+            transition: color 0.5s;
+          }
+
+          &:hover {
+            color: var(--highlight);
+          }
+        }
+      }
+    }
+
+    .nav-toggle {
+      cursor: pointer;
+      margin-right: 3rem;
+      padding: 1.2rem 0;
+      display: none;
+
+      @include respond(tab-port) {
+        display: inline-block;
+        margin: 1.5rem;
+      }
+
+      // &:hover p::after {
+      //   transform: translateY(1.2rem) translateX(-50%);
+      // }
+
+      // &:hover p::before {
+      //   transform: translateY(-1.2rem) translateX(-50%);
+      // }
+
+      p {
+        height: 2px;
+        width: 3rem;
+        background-color: var(--highlight);
+        position: relative;
+        transition: 0.3s;
+        pointer-events: none;
+
+        &::after,
+        &::before {
+          content: "";
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          background-color: var(--highlight);
+          transform-origin: center;
+          transition: 0.3s;
+        }
+
+        &::before {
+          transform: translateY(-1rem) translateX(-50%);
+        }
+        &::after {
+          transform: translateY(1rem) translateX(-50%);
+        }
+      }
+    }
+  }
+}
+
+.toggle {
+  max-height: 27rem;
+  overflow: auto;
+  animation: hide-scroll 1s backwards;
+  @keyframes hide-scroll {
+    from,
+    to {
+      overflow: hidden;
+    }
+  }
+}
+
+.active {
+  transform: scale(1.2);
+
+  p {
+    background-color: transparent !important;
+  }
+  p::after {
+    transform: translateY(0) translateX(-50%) rotate(315deg) !important;
+    background-color: red !important;
+  }
+
+  p::before {
+    transform: translateY(0) translateX(-50%) rotate(-315deg) !important;
+    background-color: red !important;
+  }
+}
+
+.nav-fixed {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  animation: navAnimation 1s ease;
+}

@@ -1,0 +1,223 @@
+.contact-section {
+  padding: 8rem 0;
+  height: auto;
+  background: #0f2027;
+
+  @include respond(tab-port) {
+    padding: 2rem 0;
+  }
+
+  //   background-color: #1b242f;
+  h3 {
+    text-align: center;
+  }
+  span {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.contact-box {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto;
+  grid-column-gap: 1rem;
+  width: 70%;
+  padding-top: 6rem;
+
+  @include respond(tab-port) {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-row-gap: 1rem;
+    width: 98%;
+    padding-top: 2rem;
+  }
+}
+
+.message-box {
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 3px;
+  border: 0.5px rgba(255, 255, 255, 0.2) solid;
+  position: relative;
+  padding: 1rem;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 10rem;
+    height: 110%;
+    width: 5rem;
+    background-color: rgba(46, 45, 45, 0.2);
+    transform: skew(-30deg);
+    z-index: 11;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 43rem;
+    height: 110%;
+    width: 5rem;
+    background-color: rgba(46, 45, 45, 0.2);
+    transform: skew(-30deg);
+    z-index: 11;
+  }
+
+  form {
+    position: relative;
+    z-index: 11;
+    @include flexCenter;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+
+    input:not(:last-child),
+    textarea {
+      font-family: inherit;
+      font-weight: 600;
+      width: 100%;
+      height: 5rem;
+      background-color: rgba(109, 109, 109, 0.192);
+      outline: none;
+      border: none;
+      margin-bottom: 0.5rem;
+      padding: 0.5rem 1rem;
+      border-radius: 3px;
+      font-size: 1.8rem;
+      color: var(--white);
+      border-bottom: 3px transparent solid;
+      transition: border 0.3s;
+
+      &:focus {
+        outline: none;
+        border-bottom: 3px var(--highlight) solid;
+      }
+
+      &:focus:invalid {
+        border-bottom: 3px var(--orange-red) solid;
+      }
+    }
+
+    textarea {
+      height: 15rem;
+      padding-top: 1rem;
+    }
+
+    input:last-child {
+      display: block;
+      position: relative;
+      background-color: transparent;
+      border: 1px rgba(255, 255, 255, 0.2) solid;
+      padding: 0.8rem 2rem;
+      outline: none;
+      color: var(--white);
+      font-size: 1.8rem;
+      font-weight: 500;
+      font-family: inherit;
+      transition: background-color, color, border, 0.3s;
+      cursor: pointer;
+      margin-top: 1rem;
+      text-transform: uppercase;
+
+      &:focus {
+        outline: none;
+      }
+
+      &:active {
+        transform: translateY(2px);
+      }
+
+      &:hover {
+        background-color: var(--blue);
+        // color: black;
+        border: 1px var(--blue) solid;
+      }
+    }
+  }
+}
+
+.findme-box {
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 3px;
+  border: 0.5px rgba(255, 255, 255, 0.2) solid;
+  position: relative;
+  padding: 1rem;
+
+  .social-contact {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    h3 {
+      font-size: 2.2rem;
+      font-weight: 400;
+      grid-column: 1 / span 3;
+      margin-bottom: 2rem;
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: var(--white);
+      display: block;
+      @include flexCenter;
+      flex-direction: column;
+      border: 1px rgba(129, 129, 129, 0.15) solid;
+      padding: 0.5rem;
+      transition: background-color 0.3s;
+
+      &:last-child {
+        grid-column: 2/3;
+      }
+
+      &:hover {
+        background-color: var(--blue);
+      }
+    }
+
+    a:hover .icon {
+      color: white !important;
+    }
+
+    .icon {
+      font-size: 3rem;
+      color: var(--blue);
+      padding-bottom: 0.5rem;
+      transition: color 0.3s;
+    }
+    .fa-instagram {
+      color: rgb(230, 1, 172);
+      padding-bottom: 0.5rem;
+      font-size: 3rem;
+    }
+  }
+
+  .email {
+    text-align: center;
+    h3 {
+      font-size: 2.2rem;
+      font-weight: 400;
+      margin-top: 4rem;
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: var(--white);
+      display: block;
+      padding: 0.5rem 0;
+      transition: transform 0.4s;
+
+      &:hover {
+        color: var(--blue);
+        transform: scale(1.05);
+      }
+    }
+  }
+}

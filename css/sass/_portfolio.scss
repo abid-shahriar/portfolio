@@ -1,0 +1,93 @@
+.portfolio-section {
+  padding: 8rem 0;
+  border-bottom: 5px var(--black) solid;
+  // background-color: #020d20;
+  background: linear-gradient(180deg, #0f2027, #203a43, #2c5364);
+  @include respond(tab-port) {
+    padding: 2rem 0;
+  }
+
+  h3 {
+    text-align: center;
+  }
+  span {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.portfolio {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  padding: 5rem 10rem;
+  @include respond(tab-port) {
+    grid-template-columns: auto;
+    padding: 5rem 1rem;
+  }
+
+  &__box {
+    height: auto;
+    background-color: var(--blue);
+    overflow: hidden;
+    border: 1px solid white;
+
+    &:hover .description-box {
+      transform: translateY(0);
+      padding-top: 4rem;
+    }
+    &:hover img {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.portfolio-main-box {
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    transition: 4s ease-out;
+  }
+
+  .description-box {
+    text-align: center;
+    padding: 1rem 2rem;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background-color: rgba(27, 27, 27, 0.99);
+    color: black;
+    transform: translateY(75%);
+    transition: 0.5s ease-in-out;
+
+    h3 {
+      // color: black;
+      font-size: 2rem;
+      font-weight: 400;
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 2rem;
+      color: white;
+      padding: 1rem 2rem;
+      display: inline-block;
+      border: 1px solid white;
+      transition: 0.3s;
+      margin-top: 5rem;
+
+      &:hover {
+        background-color: var(--blue);
+        border: 1px solid var(--black);
+      }
+    }
+  }
+}
