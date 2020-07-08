@@ -123,6 +123,7 @@
       cursor: pointer;
       margin-top: 1rem;
       text-transform: uppercase;
+      border-radius: 5px;
 
       &:focus {
         outline: none;
@@ -133,9 +134,7 @@
       }
 
       &:hover {
-        background-color: var(--blue);
-        // color: black;
-        border: 1px var(--blue) solid;
+        background-color: rgba(0, 140, 255, 0.3);
       }
     }
   }
@@ -170,30 +169,20 @@
       border: 1px rgba(129, 129, 129, 0.15) solid;
       padding: 0.5rem;
       transition: background-color 0.3s;
+      border-radius: 5px;
 
       &:last-child {
         grid-column: 2/3;
       }
 
       &:hover {
-        background-color: var(--blue);
+        background-color: rgba(0, 140, 255, 0.3);
       }
     }
 
-    a:hover .icon {
-      color: white !important;
-    }
-
-    .icon {
-      font-size: 3rem;
-      color: var(--blue);
+    img {
+      height: 3rem;
       padding-bottom: 0.5rem;
-      transition: color 0.3s;
-    }
-    .fa-instagram {
-      color: rgb(230, 1, 172);
-      padding-bottom: 0.5rem;
-      font-size: 3rem;
     }
   }
 

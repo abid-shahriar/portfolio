@@ -119,7 +119,7 @@
       border: 2px var(--white) solid;
       padding: 1rem 2rem;
       border-radius: 50px;
-      transition: background-color, border, transform, 0.5s;
+      transition: background-color, border, transform, 0.3s;
 
       @include respond(tab-port) {
         font-size: 2rem;
@@ -128,8 +128,7 @@
     }
 
     a:hover {
-      background-color: var(--blue);
-      border: 2px var(--blue) solid;
+      background-color: rgba(0, 140, 255, 0.3);
     }
 
     a:active {
