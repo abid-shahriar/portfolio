@@ -46,46 +46,41 @@ header {
       }
     }
 
-    .header__btn {
-      font-family: inherit;
-      font-size: 2rem;
-      margin-top: 2rem;
-      padding: 1rem 2rem;
-      color: var(--white);
-      border: 2px var(--white) solid;
-      background-color: transparent;
-      transition: background-color, border, 0.5s;
-      position: relative;
-      z-index: 2;
-      text-decoration: none;
-
-      @include respond(phone) {
-        font-size: 1.6rem;
-        padding: 0.5rem 1rem;
-      }
-
-      &:focus {
-        outline: none;
-      }
-      &:active {
-        outline: none;
-        transform: translateY(3px);
-      }
-
-      &:hover {
-        background-color: var(--blue);
-        border: 2px var(--blue) solid;
-        cursor: pointer;
-      }
-
-      .header-icon {
+    .header-links {
+      margin-top: 3rem;
+      a {
         display: inline-block;
-        margin-left: 0.8rem;
-        transition: transform 0.5s;
-      }
+        font-family: inherit;
+        font-size: 2rem;
+        padding: 1rem 3rem;
+        color: var(--white);
+        border: 1px solid rgba(255, 255, 255, 0.9);
+        background-color: rgba(255, 255, 255, 0.1);
+        transition: 0.3s;
+        position: relative;
+        z-index: 2;
+        text-decoration: none;
+        border-radius: 100px;
+        margin-right: 1rem;
+        cursor: pointer;
 
-      &:hover .header-icon {
-        transform: rotate(90deg);
+        @include respond(phone) {
+          font-size: 1.6rem;
+          padding: 0.5rem 1rem;
+        }
+
+        &:focus {
+          outline: none;
+        }
+        &:active {
+          outline: none;
+          transform: translateY(3px);
+        }
+
+        &:hover {
+          background-color: var(--blue);
+          border: 1px var(--blue) solid;
+        }
       }
     }
   }

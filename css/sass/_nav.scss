@@ -25,7 +25,7 @@ nav {
     .menu-item {
       @include flexCenter;
       text-align: left;
-      transition: max-height 1.2s ease-in-out;
+      transition: max-height 0.5s ease-in-out;
       transition-timing-function: cubic-bezier(0.22, 0.68, 0, 1, 0.71);
       max-height: auto;
 
@@ -111,10 +111,10 @@ nav {
   }
 }
 
-.toggle {
+#nav .toggle {
   max-height: 27rem;
   overflow: auto;
-  animation: hide-scroll 1s backwards;
+  animation: hide-scroll 0.5s;
   @keyframes hide-scroll {
     from,
     to {
