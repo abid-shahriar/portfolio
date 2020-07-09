@@ -1,3 +1,33 @@
+(function rocketFly() {
+  let container = document.querySelector(".preloader-container");
+  let counter = 20;
+  let i = 0;
+
+  while (i < counter) {
+    let stars = document.createElement("i");
+    let positionX = Math.floor(Math.random() * window.innerWidth);
+
+    let duration = Math.random() * 2;
+    let height = Math.random() * 100;
+
+    stars.style.left = `${positionX}px`;
+    stars.style.width = `1px`;
+    stars.style.height = `${height}px`;
+    stars.style.animationDuration = `${duration}s`;
+
+    container.appendChild(stars);
+
+    i++;
+  }
+})();
+
+window.addEventListener("load", () => {
+  let preLoader = document.querySelector(".preloader-container");
+  setTimeout(() => {
+    preLoader.classList.add("hide");
+  }, 1000);
+});
+
 window.addEventListener("DOMContentLoaded", () => {
   // selectors************************************************************
   const navToggle = document.querySelector(".nav-toggle");
