@@ -1,10 +1,11 @@
 .portfolio-section {
-  padding: 8rem 0;
+  // padding: 8rem 0;
+  padding: 10rem 10rem;
   border-bottom: 5px var(--black) solid;
   // background-color: #020d20;
   background: linear-gradient(180deg, #0f2027, #203a43, #2c5364);
   @include respond(tab-port) {
-    padding: 2rem 0;
+    padding: 7rem 1rem;
     background: linear-gradient(180deg, #2c5364);
   }
 
@@ -14,6 +15,7 @@
   span {
     display: block;
     margin: 0 auto;
+    margin-bottom: 4rem;
   }
 }
 
@@ -25,7 +27,7 @@
   grid-row-gap: 2rem;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto;
-  padding: 5rem 10rem;
+
   @include respond(tab-port) {
     grid-template-columns: auto;
     padding: 5rem 1rem;
@@ -120,6 +122,10 @@
 //   filter: blur(5px);
 // }
 
-// .portfolio:hover .portfolio__box:not(:hover) {
-//   filter: blur(5px);
-// }
+@media screen and (min-width: 992px) {
+  .portfolio:hover .portfolio__box:not(:hover) {
+    filter: grayscale(100%);
+    opacity: 0.4;
+    transform: scale(0.97);
+  }
+}
