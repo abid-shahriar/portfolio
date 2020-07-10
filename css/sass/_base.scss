@@ -47,10 +47,10 @@ body {
   background-color: var(--highlight);
 }
 
-body > *:not([id="preloader"]) {
-  opacity: 0.5;
-}
+// body > *:not([id="preloader"]) {
+//   opacity: 0.5;
+// }
 
-body.body > * {
-  opacity: 1;
-}
+// body.body > * {
+//   opacity: 1;
+// }

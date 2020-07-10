@@ -26,7 +26,7 @@ window.addEventListener("load", () => {
   // let mainBody = document.getElementsByTagName("body");
   setTimeout(() => {
     preLoader.classList.add("hide");
-    document.body.classList.add("body");
+    // document.body.classList.add("body");
   }, 1000);
 });
 
