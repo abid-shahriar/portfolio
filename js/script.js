@@ -23,10 +23,8 @@
 
 window.addEventListener("load", () => {
   let preLoader = document.querySelector(".preloader-container");
-  // let mainBody = document.getElementsByTagName("body");
   setTimeout(() => {
     preLoader.classList.add("hide");
-    // document.body.classList.add("body");
   }, 1000);
 });
 

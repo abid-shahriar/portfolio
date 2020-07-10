@@ -25,13 +25,13 @@ nav {
     .menu-item {
       @include flexCenter;
       text-align: left;
-      transition: max-height 0.3s linear;
-      max-height: auto;
+      transition: height 0.3s linear;
+      height: auto;
 
       @include respond(tab-port) {
         flex-direction: column;
         align-items: flex-start;
-        max-height: 0;
+        height: 0;
         overflow: hidden;
       }
 
@@ -103,15 +103,7 @@ nav {
 }
 
 #nav .toggle {
-  max-height: 27rem;
-  overflow: auto;
-  animation: hide-scroll 0.3s linear;
-  @keyframes hide-scroll {
-    from,
-    to {
-      overflow: hidden;
-    }
-  }
+  height: 27rem;
 }
 
 #nav .active {

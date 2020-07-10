@@ -1,8 +1,6 @@
 .portfolio-section {
-  // padding: 8rem 0;
   padding: 10rem 10rem;
   border-bottom: 5px var(--black) solid;
-  // background-color: #020d20;
   background: linear-gradient(180deg, #0f2027, #203a43, #2c5364);
   @include respond(tab-port) {
     padding: 7rem 1rem;
@@ -36,18 +34,12 @@
   &__box {
     height: auto;
     overflow: hidden;
-    // border: 1px solid white;
     transition: 0.5s;
     border-radius: 5px;
 
     &:hover .img-box img {
       filter: grayscale(0);
     }
-
-    // &:hover .description-box {
-    //   transform: translateY(0);
-    //   padding-top: 4rem;
-    // }
   }
 }
 
@@ -64,7 +56,6 @@
     img {
       width: 100%;
       transition: 0.5s ease-out;
-      // filter: grayscale(50%);
     }
   }
 
@@ -112,15 +103,10 @@
 
       &:hover {
         background-color: rgba(0, 140, 255, 0.3);
-        // border: 1px solid var(--black);
       }
     }
   }
 }
-
-// .portfolio__box:hover + .portfolio__box:not(:hover) {
-//   filter: blur(5px);
-// }
 
 @media screen and (min-width: 992px) {
   .portfolio:hover .portfolio__box:not(:hover) {
