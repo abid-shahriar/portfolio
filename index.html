@@ -20,7 +20,7 @@
     <script src="js/script.js" defer></script>
 
   </head>
-  <body>
+  <body onload="preLoader()">
 
     <!-- Preloader Start -->
     <div class="preloader-container" id="preloader">
@@ -373,5 +373,38 @@
       <!-- ******************************** top button end ******************************** -->
 
     <!-- javaScript -->
+    <script>
+      (function rocketFly() {
+  let container = document.querySelector(".preloader-container");
+  let counter = 20;
+  let i = 0;
+
+  while (i < counter) {
+    let stars = document.createElement("i");
+    let positionX = Math.floor(Math.random() * window.innerWidth);
+
+    let duration = Math.random() * 2;
+    let height = Math.random() * 100;
+
+    stars.style.left = `${positionX}px`;
+    stars.style.width = `1px`;
+    stars.style.height = `${height}px`;
+    stars.style.animationDuration = `${duration}s`;
+
+    container.appendChild(stars);
+
+    i++;
+  }
+})();
+    </script>
+
+    <script>
+      function preLoader(){
+        let preLoader = document.querySelector(".preloader-container");
+          setTimeout(() => {
+            preLoader.classList.add("hide");
+          }, 1000);
+      }
+    </script>
   </body>
 </html>
