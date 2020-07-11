@@ -5,15 +5,12 @@ $shooting-time: 5000ms;
   width: 100%;
   height: 100%;
   transform: rotateZ(45deg);
-  // animation: sky 200000ms linear infinite;
 }
 
 .shooting_star {
   position: absolute;
   left: 10%;
   top: 10%;
-  //   border: 1px red solid;
-  // width: 100px;
   height: 2px;
   background: linear-gradient(
     -45deg,
@@ -27,7 +24,6 @@ $shooting-time: 5000ms;
     pause-animation #{$shooting-time * 2} infinite;
 
   @include respond(tab-port) {
-    // $shooting-time: 10000ms;
     animation: tail 10s ease-in-out infinite, shooting 10s ease-in-out infinite,
       pause-animation #{$shooting-time * 2} infinite;
   }
@@ -37,7 +33,6 @@ $shooting-time: 5000ms;
     position: absolute;
     top: calc(50% - 1px);
     right: 0;
-    // width: 30px;
     height: 2px;
     background: linear-gradient(
       -45deg,

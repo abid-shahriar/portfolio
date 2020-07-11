@@ -1,3 +1,4 @@
+// Header Section Styles Start *****************************************
 header {
   min-height: 93vh;
   @include flexCenter();
@@ -168,3 +169,5 @@ header {
   animation-delay: -7s;
   border-color: rgb(240, 67, 5);
 }
+
+// Header Section Styles End #########################################

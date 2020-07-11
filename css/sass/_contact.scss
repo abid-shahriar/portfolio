@@ -1,3 +1,4 @@
+// Contact Section Styles Start *****************************************
 .contact-section {
   padding: 8rem 0;
   height: auto;
@@ -6,8 +7,6 @@
   @include respond(tab-port) {
     padding: 2rem 0;
   }
-
-  //   background-color: #1b242f;
   h3 {
     text-align: center;
   }
@@ -212,3 +211,5 @@
     }
   }
 }
+
+// Contact Section Styles End #############################################

@@ -1,3 +1,5 @@
+// Mixins Styles Start *****************************************
+
 @mixin flexCenter {
   display: flex;
   justify-content: center;
@@ -5,7 +7,6 @@
 }
 
 // Media Query Manager
-
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
     @media (max-width: 37.5em) {
@@ -28,3 +29,5 @@
     }
   }
 }
+
+// Mixins Styles End #############################################

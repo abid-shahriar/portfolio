@@ -1,142 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <style>
-      
-.preloader-container {
-  position: fixed;
-  height: 100vh;
-  width: 100%;
-  background: black;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  z-index: 10000000;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-.preloader-container i {
-  position: absolute;
-  background-color: white;
-  top: -250px;
-  -webkit-animation: star-fly 5s linear infinite;
-          animation: star-fly 5s linear infinite;
-}
-
-@-webkit-keyframes star-fly {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  100% {
-    -webkit-transform: translateY(150vh);
-            transform: translateY(150vh);
-  }
-}
-
-@keyframes star-fly {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  100% {
-    -webkit-transform: translateY(150vh);
-            transform: translateY(150vh);
-  }
-}
-
-.preloader-container .rocket {
-  height: 150px;
-  position: relative;
-  -webkit-animation: rocket-fly 1.5s linear infinite;
-          animation: rocket-fly 1.5s linear infinite;
-  z-index: 100;
-}
-
-@-webkit-keyframes rocket-fly {
-  0%,
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  50% {
-    -webkit-transform: translateY(-9px);
-            transform: translateY(-9px);
-  }
-}
-
-@keyframes rocket-fly {
-  0%,
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  50% {
-    -webkit-transform: translateY(-9px);
-            transform: translateY(-9px);
-  }
-}
-
-.preloader-container .rocket:before, .preloader-container .rocket::after {
-  content: "";
-  position: absolute;
-  height: 200px;
-  width: 30px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#00b7ff), to(transparent));
-  background: linear-gradient(to bottom, #00b7ff, transparent);
-  bottom: 0;
-  top: 72%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
-.preloader-container .rocket::before {
-  -webkit-filter: blur(5px);
-          filter: blur(5px);
-}
-
-.preloader-container .rocket::after {
-  -webkit-filter: blur(50px);
-          filter: blur(50px);
-}
-
-.preloader-container .rocket img {
-  position: relative;
-  height: 100%;
-  z-index: 100;
-}
-
-@media screen and (max-width: 587px) {
-  .preloader-container .rocket {
-    height: 120px;
-  }
-  .preloader-container .rocket:before, .preloader-container .rocket::after {
-    height: 150px;
-    width: 25px;
-  }
-}
-
-#preloader.hide {
-  height: 0;
-  overflow: hidden;
-}
-</style>
-    <!-- css -->
-    <link rel="stylesheet" href="css/main.css" />
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="I am Abid Shahriar. I'm a web designer & a front-end web developer.">
+    <meta
+      name="description"
+      content="I am Abid Shahriar. I'm a web designer & a front-end web developer."
+    />
     <title>Abid SH Akash</title>
-    
 
     <!-- fonts -->
     <link
@@ -144,34 +15,159 @@
       rel="stylesheet"
     />
 
+    <!-- css -->
+    <link rel="stylesheet" href="css/main.css" />
+    <style>
+      .preloader-container {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        background: black;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        z-index: 10000000;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+      }
+
+      .preloader-container i {
+        position: absolute;
+        background-color: white;
+        top: -250px;
+        -webkit-animation: star-fly 5s linear infinite;
+        animation: star-fly 5s linear infinite;
+      }
+
+      @-webkit-keyframes star-fly {
+        0% {
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+        }
+        100% {
+          -webkit-transform: translateY(150vh);
+          transform: translateY(150vh);
+        }
+      }
+
+      @keyframes star-fly {
+        0% {
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+        }
+        100% {
+          -webkit-transform: translateY(150vh);
+          transform: translateY(150vh);
+        }
+      }
+
+      .preloader-container .rocket {
+        height: 150px;
+        position: relative;
+        -webkit-animation: rocket-fly 1.5s linear infinite;
+        animation: rocket-fly 1.5s linear infinite;
+        z-index: 100;
+      }
+
+      @-webkit-keyframes rocket-fly {
+        0%,
+        100% {
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+        }
+        50% {
+          -webkit-transform: translateY(-9px);
+          transform: translateY(-9px);
+        }
+      }
+
+      @keyframes rocket-fly {
+        0%,
+        100% {
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+        }
+        50% {
+          -webkit-transform: translateY(-9px);
+          transform: translateY(-9px);
+        }
+      }
+
+      .preloader-container .rocket:before,
+      .preloader-container .rocket::after {
+        content: "";
+        position: absolute;
+        height: 200px;
+        width: 30px;
+        background: -webkit-gradient(
+          linear,
+          left top,
+          left bottom,
+          from(#00b7ff),
+          to(transparent)
+        );
+        background: linear-gradient(to bottom, #00b7ff, transparent);
+        bottom: 0;
+        top: 72%;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+      }
+
+      .preloader-container .rocket::before {
+        -webkit-filter: blur(5px);
+        filter: blur(5px);
+      }
+
+      .preloader-container .rocket::after {
+        -webkit-filter: blur(50px);
+        filter: blur(50px);
+      }
+
+      .preloader-container .rocket img {
+        position: relative;
+        height: 100%;
+        z-index: 100;
+      }
+
+      @media screen and (max-width: 587px) {
+        .preloader-container .rocket {
+          height: 120px;
+        }
+        .preloader-container .rocket:before,
+        .preloader-container .rocket::after {
+          height: 150px;
+          width: 25px;
+        }
+      }
+
+      #preloader.hide {
+        height: 0;
+        overflow: hidden;
+      }
+    </style>
+
     <!-- js -->
     <script src="js/script.js" defer></script>
-
   </head>
   <body onload="preLoader()">
-
-    <!-- Preloader Start -->
+    <!-- Preloader Start **********************************-->
     <div class="preloader-container" id="preloader">
       <div class="rocket">
         <img src="./img/rocket.svg" alt="rocket" />
       </div>
     </div>
-    <!-- Preloader End -->
-    <!-- ******************************** Header Section Start ******************************** -->
-    <header>     
-      <!-- ********* Header Backgroung Animation start *********** -->
-      <!-- <div class="header-bg">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div> -->
+    <!-- Preloader End ####################################-->
+
+    <!-- Header Section Start ******************************** -->
+    <header>
+      <!-- Header Backgroung Animation start -->
       <div class="night">
         <div class="shooting_star"></div>
         <div class="shooting_star"></div>
@@ -190,30 +186,32 @@
         <div class="shooting_star"></div>
         <div class="shooting_star"></div>
       </div>
-      <!-- ********* Header Backgroung Animation End *********** -->
+      <!-- Header Backgroung Animation End  -->
+
       <div class="text">
         <h1>
-          <span class="h1__top ">Hello, I'm <span class="highlight">Abid Shahriar</span>.</span>
+          <span class="h1__top"
+            >Hello, I'm <span class="highlight">Abid Shahriar</span>.</span
+          >
           <br />
           <span class="h1__bottom">I'm a front-end web developer.</span>
         </h1>
         <div class="header-links">
-          <a class="header__btn fadeInLeft" href='#portfolio-section'>
+          <a class="header__btn" href="#portfolio-section">
             Projects
           </a>
-          <a href="https://github.com/abid-shahriar?tab=repositories" target="_blank" class="fadeInRight">Github</a>
-          
+          <a
+            href="https://github.com/abid-shahriar?tab=repositories"
+            target="_blank"
+            class=""
+            >Github</a
+          >
         </div>
-        
       </div>
     </header>
-    <!-- ******************************** Header Section End ******************************** -->
+    <!-- Header Section End #################################### -->
 
-
-
-
-
-    <!-- ******************************** Navbar Section Start ******************************** -->
+    <!--  Navbar Section Start ********************************* -->
     <nav id="nav">
       <div class="nav-container">
         <div class="nav-toggle">
@@ -226,70 +224,78 @@
           <li><a class="navItem" href="#portfolio-section">Portfolio</a></li>
           <li><a class="navItem" href="#contact-section">Contact</a></li>
         </ul>
-
       </div>
     </nav>
-    <!-- ******************************** Navbar Section End ******************************** -->
+    <!--  Navbar Section End  ################################-->
 
     <main>
-      <!-- ******************************** About Section Start ******************************** -->
+      <!--  About Section Start **************************** -->
       <section class="about-section" id="about-section">
         <div class="about">
           <div class="about__grid about__grid--left">
             <figure>
-              <img  class=" " src="img/me.jpg" alt="abid">
+              <img class=" " src="img/me.jpg" alt="abid" />
               <figcaption class=" ">
-                 Abid Shahriar
+                Abid Shahriar
               </figcaption>
             </figure>
-            <h2 class="about__job  ">Web Developer</h2>
-            <div class="about__info  ">
-              <h3 class="about__info-content ">
-                <svg class="icon ">
-                  <path d="M7,12H9V14H7V12M21,6V20A2,2 0 0,1 19,22H5C3.89,22 3,21.1 3,20V6A2,2 0 0,1 5,4H6V2H8V4H16V2H18V4H19A2,2 0 0,1 21,6M5,8H19V6H5V8M19,20V10H5V20H19M15,14V12H17V14H15M11,14V12H13V14H11M7,16H9V18H7V16M15,18V16H17V18H15M11,18V16H13V18H11Z" />
-                </svg>
-                October 02, 1997</h3>
+            <h2 class="about__job">Web Developer</h2>
+            <div class="about__info">
               <h3 class="about__info-content">
                 <svg class="icon">
-                  <path d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z" />
+                  <path
+                    d="M7,12H9V14H7V12M21,6V20A2,2 0 0,1 19,22H5C3.89,22 3,21.1 3,20V6A2,2 0 0,1 5,4H6V2H8V4H16V2H18V4H19A2,2 0 0,1 21,6M5,8H19V6H5V8M19,20V10H5V20H19M15,14V12H17V14H15M11,14V12H13V14H11M7,16H9V18H7V16M15,18V16H17V18H15M11,18V16H13V18H11Z"
+                  />
                 </svg>
-                Bogura, Bangladesh</h3>
+                October 02, 1997
+              </h3>
+              <h3 class="about__info-content">
+                <svg class="icon">
+                  <path
+                    d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z"
+                  />
+                </svg>
+                Bogura, Bangladesh
+              </h3>
             </div>
             <a href="#contact-section" class=" ">Contact me</a>
           </div>
           <div class="about__grid about__grid--right">
             <div class="about-me">
               <h3 class=" ">About me</h3>
-              <span class="small-dash   "></span>
-              <p class=" ">I would describe myself as a quick learner. I love solving problems usuing simple and scaleable solution & clean coding is my number one priority.</p>
+              <span class="small-dash"></span>
+              <p class=" ">
+                I would describe myself as a quick learner. I love solving
+                problems usuing simple and scaleable solution & clean coding is
+                my number one priority.
+              </p>
             </div>
 
             <div class="skills">
               <h3 class=" ">Skills</h3>
               <span class="small-dash"></span>
               <div class="skill-level">
-
-                <div class="skill-level__box" >
+                <div class="skill-level__box">
                   <span class="text">HTML</span>
                   <span class="progress html">90%</span>
                 </div>
 
-                <div class="skill-level__box" >
+                <div class="skill-level__box">
                   <span class="text">CSS</span>
                   <span class="progress css">90%</span>
                 </div>
 
-                <div class="skill-level__box" >
+                <div class="skill-level__box">
                   <span class="text">SASS</span>
                   <span class="progress sass">85%</span>
                 </div>
 
-                <div class="skill-level__box" >
+                <div class="skill-level__box">
                   <span class="text">JS</span>
                   <span class="progress js">60%</span>
                 </div>
 
-                <div class="skill-level__box" >
+                <div class="skill-level__box">
                   <span class="text">Photoshop</span>
                   <span class="progress photoshop">70%</span>
                 </div>
@@ -303,80 +309,95 @@
           </div>
         </div>
       </section>
-      <!-- ******************************** About Section End ******************************** -->
+      <!--  About Section End ##################################### -->
 
-      <!-- ******************************** Services Section Start ******************************** -->
+      <!--  Services Section Start ****************************** -->
       <section class="servces-section" id="services-section">
-        <div class="my-strongpoint ">
+        <div class="my-strongpoint">
           <h3 class=" ">Services</h3>
           <span class="small-dash"></span>
           <div class="my-strongpoint__section">
             <div class="fast">
-              <svg class="fast-icon ">
-                <path d="M12,16A3,3 0 0,1 9,13C9,11.88 9.61,10.9 10.5,10.39L20.21,4.77L14.68,14.35C14.18,15.33 13.17,16 12,16M12,3C13.81,3 15.5,3.5 16.97,4.32L14.87,5.53C14,5.19 13,5 12,5A8,8 0 0,0 4,13C4,15.21 4.89,17.21 6.34,18.65H6.35C6.74,19.04 6.74,19.67 6.35,20.06C5.96,20.45 5.32,20.45 4.93,20.07V20.07C3.12,18.26 2,15.76 2,13A10,10 0 0,1 12,3M22,13C22,15.76 20.88,18.26 19.07,20.07V20.07C18.68,20.45 18.05,20.45 17.66,20.06C17.27,19.67 17.27,19.04 17.66,18.65V18.65C19.11,17.2 20,15.21 20,13C20,12 19.81,11 19.46,10.1L20.67,8C21.5,9.5 22,11.18 22,13Z" />
+              <svg class="fast-icon">
+                <path
+                  d="M12,16A3,3 0 0,1 9,13C9,11.88 9.61,10.9 10.5,10.39L20.21,4.77L14.68,14.35C14.18,15.33 13.17,16 12,16M12,3C13.81,3 15.5,3.5 16.97,4.32L14.87,5.53C14,5.19 13,5 12,5A8,8 0 0,0 4,13C4,15.21 4.89,17.21 6.34,18.65H6.35C6.74,19.04 6.74,19.67 6.35,20.06C5.96,20.45 5.32,20.45 4.93,20.07V20.07C3.12,18.26 2,15.76 2,13A10,10 0 0,1 12,3M22,13C22,15.76 20.88,18.26 19.07,20.07V20.07C18.68,20.45 18.05,20.45 17.66,20.06C17.27,19.67 17.27,19.04 17.66,18.65V18.65C19.11,17.2 20,15.21 20,13C20,12 19.81,11 19.46,10.1L20.67,8C21.5,9.5 22,11.18 22,13Z"
+                />
               </svg>
               <h4 class="">Fast</h4>
-              <p class="">Faster load times and lag<br> free design with raw code.</p>
+              <p class="">
+                Faster load times and lag<br />
+                free design with raw code.
+              </p>
             </div>
             <div class="responsive">
               <svg class="responsive-icon">
-                <path d="M22,17H18V10H22M23,8H17A1,1 0 0,0 16,9V19A1,1 0 0,0 17,20H23A1,1 0 0,0 24,19V9A1,1 0 0,0 23,8M4,6H22V4H4A2,2 0 0,0 2,6V17H0V20H14V17H4V6Z" />
+                <path
+                  d="M22,17H18V10H22M23,8H17A1,1 0 0,0 16,9V19A1,1 0 0,0 17,20H23A1,1 0 0,0 24,19V9A1,1 0 0,0 23,8M4,6H22V4H4A2,2 0 0,0 2,6V17H0V20H14V17H4V6Z"
+                />
               </svg>
               <h4 class="">Responsive</h4>
-              <p class="">Get the same awesome experience<br> in any device samll or big.</p>
+              <p class="">
+                Get the same awesome experience<br />
+                in any device samll or big.
+              </p>
             </div>
             <div class="semantic">
               <svg class="semantic-icon">
-                <path d="M6.59,3.41L2,8L6.59,12.6L8,11.18L4.82,8L8,4.82L6.59,3.41M12.41,3.41L11,4.82L14.18,8L11,11.18L12.41,12.6L17,8L12.41,3.41M21.59,11.59L13.5,19.68L9.83,16L8.42,17.41L13.5,22.5L23,13L21.59,11.59Z" />
+                <path
+                  d="M6.59,3.41L2,8L6.59,12.6L8,11.18L4.82,8L8,4.82L6.59,3.41M12.41,3.41L11,4.82L14.18,8L11,11.18L12.41,12.6L17,8L12.41,3.41M21.59,11.59L13.5,19.68L9.83,16L8.42,17.41L13.5,22.5L23,13L21.59,11.59Z"
+                />
               </svg>
               <h4 class="">Semantic</h4>
-              <p class="">Semantic HTML coding<br> for high ranking SEO</p>
+              <p class="">
+                Semantic HTML coding<br />
+                for high ranking SEO
+              </p>
             </div>
             <div class="dynamic">
               <svg class="dynamic-icon">
-                <path d="M10.76,8.69A0.76,0.76 0 0,0 10,9.45V20.9C10,21.32 10.34,21.66 10.76,21.66C10.95,21.66 11.11,21.6 11.24,21.5L13.15,19.95L14.81,23.57C14.94,23.84 15.21,24 15.5,24C15.61,24 15.72,24 15.83,23.92L18.59,22.64C18.97,22.46 19.15,22 18.95,21.63L17.28,18L19.69,17.55C19.85,17.5 20,17.43 20.12,17.29C20.39,16.97 20.35,16.5 20,16.21L11.26,8.86L11.25,8.87C11.12,8.76 10.95,8.69 10.76,8.69M15,10V8H20V10H15M13.83,4.76L16.66,1.93L18.07,3.34L15.24,6.17L13.83,4.76M10,0H12V5H10V0M3.93,14.66L6.76,11.83L8.17,13.24L5.34,16.07L3.93,14.66M3.93,3.34L5.34,1.93L8.17,4.76L6.76,6.17L3.93,3.34M7,10H2V8H7V10" />
+                <path
+                  d="M10.76,8.69A0.76,0.76 0 0,0 10,9.45V20.9C10,21.32 10.34,21.66 10.76,21.66C10.95,21.66 11.11,21.6 11.24,21.5L13.15,19.95L14.81,23.57C14.94,23.84 15.21,24 15.5,24C15.61,24 15.72,24 15.83,23.92L18.59,22.64C18.97,22.46 19.15,22 18.95,21.63L17.28,18L19.69,17.55C19.85,17.5 20,17.43 20.12,17.29C20.39,16.97 20.35,16.5 20,16.21L11.26,8.86L11.25,8.87C11.12,8.76 10.95,8.69 10.76,8.69M15,10V8H20V10H15M13.83,4.76L16.66,1.93L18.07,3.34L15.24,6.17L13.83,4.76M10,0H12V5H10V0M3.93,14.66L6.76,11.83L8.17,13.24L5.34,16.07L3.93,14.66M3.93,3.34L5.34,1.93L8.17,4.76L6.76,6.17L3.93,3.34M7,10H2V8H7V10"
+                />
               </svg>
               <h4 class="">Dynamic</h4>
-              <p class="">Dynamic sites are fun.<br>I love making pages come to life.</p>
+              <p class="">
+                Dynamic sites are fun.<br />I love making pages come to life.
+              </p>
             </div>
           </div>
         </div>
       </section>
-      <!-- ******************************** Services Section End ******************************** -->
+      <!--  Services Section End ################################# -->
 
-      <!-- ******************************** Portfolio Section Start ******************************** -->
+      <!--  Portfolio Section Start ****************************** -->
       <section class="portfolio-section" id="portfolio-section">
         <h3 class=" ">Portfolio</h3>
-        <span class="small-dash   "></span>
+        <span class="small-dash"></span>
         <div class="portfolio">
           <div class="portfolio__box">
             <div class="portfolio-main-box">
               <div class="img-box">
-                <img  src="img/chat-app.jpg" alt="chat-app">
+                <img src="img/chat-app.jpg" alt="chat-app" />
               </div>
               <div class="description-box">
                 <h3>Chat-box UI</h3>
                 <h4>(Not-Responsive)</h4>
-                <p>A simple chat box UI built with HTML and CSS. No framework or Icon-pck is used in this project</p>
+                <p>
+                  A simple chat box UI built with HTML and CSS. No framework or
+                  Icon-pck is used in this project
+                </p>
                 <div class="github-links">
-                  <a href="https://github.com/abid-shahriar/chatUI" target="_blank">code</a>
-                  <a href="https://abid-shahriar.github.io/chatUI" target="_blank" rel="noreferrer">Demo</a>
-                </div>
-            </div>
-            </div>
-          </div>
-          <div class="portfolio__box">
-            <div class="portfolio-main-box">
-              <div class="img-box">
-                <img  src="img/analogClock.jpg" alt="chat-app">
-              </div>       
-              <div class="description-box">
-                <h3>Analog Clock </h3>
-                <h4>(Full-Responsive)</h4>
-                <p>An analog-clock with random color generator built with HTML, CSS and Vanilla-JavaScript. </p>
-                <div class="github-links">
-                  <a href="https://github.com/abid-shahriar/analog-clock" target="_blank">code</a>
-                  <a href="https://abid-shahriar.github.io/analog-clock/" target="_blank" rel="noreferrer">Demo</a>
+                  <a
+                    href="https://github.com/abid-shahriar/chatUI"
+                    target="_blank"
+                    >code</a
+                  >
+                  <a
+                    href="https://abid-shahriar.github.io/chatUI"
+                    target="_blank"
+                    rel="noreferrer"
+                    >Demo</a
+                  >
                 </div>
               </div>
             </div>
@@ -384,123 +405,224 @@
           <div class="portfolio__box">
             <div class="portfolio-main-box">
               <div class="img-box">
-                <img  src="img/todoApp.jpg" alt="chat-app">
-              </div> 
+                <img src="img/analogClock.jpg" alt="chat-app" />
+              </div>
+              <div class="description-box">
+                <h3>Analog Clock</h3>
+                <h4>(Full-Responsive)</h4>
+                <p>
+                  An analog-clock with random color generator built with HTML,
+                  CSS and Vanilla-JavaScript.
+                </p>
+                <div class="github-links">
+                  <a
+                    href="https://github.com/abid-shahriar/analog-clock"
+                    target="_blank"
+                    >code</a
+                  >
+                  <a
+                    href="https://abid-shahriar.github.io/analog-clock/"
+                    target="_blank"
+                    rel="noreferrer"
+                    >Demo</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio__box">
+            <div class="portfolio-main-box">
+              <div class="img-box">
+                <img src="img/todoApp.jpg" alt="chat-app" />
+              </div>
               <div class="description-box">
                 <h3>ToDo App</h3>
                 <h4>(Full-Responsive)</h4>
-                <p>Simple To-Do app built with HTML, CSS and Vanilla-JavaScript with local storage support. </p>
+                <p>
+                  Simple To-Do app built with HTML, CSS and Vanilla-JavaScript
+                  with local storage support.
+                </p>
                 <div class="github-links">
-                  <a href="https://github.com/abid-shahriar/toDo-app" target="_blank">code</a>
-                  <a href="https://abid-shahriar.github.io/toDo-app/" target="_blank" rel="noreferrer">Demo</a>
+                  <a
+                    href="https://github.com/abid-shahriar/toDo-app"
+                    target="_blank"
+                    >code</a
+                  >
+                  <a
+                    href="https://abid-shahriar.github.io/toDo-app/"
+                    target="_blank"
+                    rel="noreferrer"
+                    >Demo</a
+                  >
                 </div>
-             </div>
-            </div>
-          </div>
-          <div class="portfolio__box">
-            <div class="portfolio-main-box">
-              <div class="img-box">
-                <img  src="img/pig-game.jpg" alt="chat-app">
-              </div> 
-              <div class="description-box">
-                <h3>Pig Game</h3>
-                <h4>(Not-Responsive)</h4>
-                <p>pig game with a dice. built with HTML, CSS & Vanilla-JavaScript and you can set the winnig score.</p>
-                <div class="github-links">
-                  <a href="https://github.com/abid-shahriar/pig-game" target="_blank">code</a>
-                  <a href="https://abid-shahriar.github.io/pig-game" target="_blank" rel="noreferrer">Demo</a>
-                </div>
-            </div>
-            </div>
-          </div>
-          <div class="portfolio__box">
-            <div class="portfolio-main-box">
-              <div class="img-box">
-                <img  src="img/foodOClock.jpg" alt="chat-app">
-              </div> 
-              <div class="description-box">
-                <h3>Food-O-Clock</h3>
-                <h4>(Full-Responsive)</h4>
-                <p>A simple restaurant website built with HTML, CSS & Vanilla-JavaScript. The food menu is generated from a food api.</p>
-                <div class="github-links">
-                  <a href="https://github.com/abid-shahriar/restaurant-website" target="_blank">code</a>
-                  <a href="https://food-o-clock.netlify.app/" target="_blank" rel="noreferrer">Demo</a>
-                </div>              
               </div>
             </div>
           </div>
           <div class="portfolio__box">
             <div class="portfolio-main-box">
               <div class="img-box">
-                <img  src="img/school-project.jpg" alt="chat-app">
+                <img src="img/pig-game.jpg" alt="chat-app" />
+              </div>
+              <div class="description-box">
+                <h3>Pig Game</h3>
+                <h4>(Not-Responsive)</h4>
+                <p>
+                  pig game with a dice. built with HTML, CSS &
+                  Vanilla-JavaScript and you can set the winnig score.
+                </p>
+                <div class="github-links">
+                  <a
+                    href="https://github.com/abid-shahriar/pig-game"
+                    target="_blank"
+                    >code</a
+                  >
+                  <a
+                    href="https://abid-shahriar.github.io/pig-game"
+                    target="_blank"
+                    rel="noreferrer"
+                    >Demo</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio__box">
+            <div class="portfolio-main-box">
+              <div class="img-box">
+                <img src="img/foodOClock.jpg" alt="chat-app" />
+              </div>
+              <div class="description-box">
+                <h3>Food-O-Clock</h3>
+                <h4>(Full-Responsive)</h4>
+                <p>
+                  A simple restaurant website built with HTML, CSS &
+                  Vanilla-JavaScript. The food menu is generated from a food
+                  api.
+                </p>
+                <div class="github-links">
+                  <a
+                    href="https://github.com/abid-shahriar/restaurant-website"
+                    target="_blank"
+                    >code</a
+                  >
+                  <a
+                    href="https://food-o-clock.netlify.app/"
+                    target="_blank"
+                    rel="noreferrer"
+                    >Demo</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio__box">
+            <div class="portfolio-main-box">
+              <div class="img-box">
+                <img src="img/school-project.jpg" alt="chat-app" />
               </div>
               <div class="description-box">
                 <h3>College Website</h3>
                 <h4>(Not-Responsive)</h4>
-                <p>A local college website Built with HTML, CSS. As it has Multiple pages, the site loading time is very quick. </p>
+                <p>
+                  A local college website Built with HTML, CSS. As it has
+                  Multiple pages, the site loading time is very quick.
+                </p>
                 <div class="github-links">
-                  <a href="https://github.com/abid-shahriar/school-project" target="_blank">code</a>
-                  <a href="https://abid-shahriar.github.io/school-project/" target="_blank" rel="noreferrer">Demo</a>
+                  <a
+                    href="https://github.com/abid-shahriar/school-project"
+                    target="_blank"
+                    >code</a
+                  >
+                  <a
+                    href="https://abid-shahriar.github.io/school-project/"
+                    target="_blank"
+                    rel="noreferrer"
+                    >Demo</a
+                  >
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- ******************************** Portfolio Section End ******************************** -->
+      <!--  Portfolio Section End #################################### -->
 
-      <!-- ******************************** Contact Section Start ******************************** -->
+      <!--  Contact Section Start ************************************ -->
       <section class="contact-section" id="contact-section">
         <h3 class=" ">Contact Me</h3>
         <span class="small-dash"></span>
         <div class="contact-box">
           <div class="message-box">
             <form action="">
-              <input name="name" type="text" placeholder="Name" required>
-              <input name="email" type="email" placeholder="Email Address" required>
-              <textarea name="textarea" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
-              <input type="submit" placeholder="Send">
+              <input name="name" type="text" placeholder="Name" required />
+              <input
+                name="email"
+                type="email"
+                placeholder="Email Address"
+                required
+              />
+              <textarea
+                name="textarea"
+                id=""
+                cols="30"
+                rows="10"
+                placeholder="Your Message"
+                required
+              ></textarea>
+              <input type="submit" placeholder="Send" />
             </form>
           </div>
+
           <div class="findme-box">
             <div class="social-contact">
-              <h3>Find Me on Social Media</h1>
-                <a href="https://www.facebook.com/abid.sh.akash"><img src="./img/facebook.svg" alt=""> Facebook</a>
-                <a href="https://www.instagram.com/find.abid/"><img src="./img/instagram.svg" alt=""> Instagram</a>
-                <a href="https://www.linkedin.com/in/abidshahriar/"><img src="./img/linkedin.svg" alt=""> Linkedin</a>
-                <a href="https://twitter.com/abid_sh_akash"><img src="./img/twitter.svg" alt=""> Twitter</a>
+              <h3>Find Me on Social Media</h3>
+              <a href="https://www.facebook.com/abid.sh.akash"
+                ><img src="./img/facebook.svg" alt="" /> Facebook</a
+              >
+              <a href="https://www.instagram.com/find.abid/"
+                ><img src="./img/instagram.svg" alt="" /> Instagram</a
+              >
+              <a href="https://www.linkedin.com/in/abidshahriar/"
+                ><img src="./img/linkedin.svg" alt="" /> Linkedin</a
+              >
+              <a href="https://twitter.com/abid_sh_akash"
+                ><img src="./img/twitter.svg" alt="" /> Twitter</a
+              >
             </div>
             <div class="email">
               <h3>Email Me</h3>
-              <a href="mailto: abidshahriar7@gmail.com">abidshahriar7@gmail.com</a>
+              <a href="mailto: abidshahriar7@gmail.com"
+                >abidshahriar7@gmail.com</a
+              >
               <a href="mailto: abid.sh@hotmail.com">abid.sh@hotmail.com</a>
             </div>
           </div>
         </div>
-        </div>
       </section>
-      <!-- ******************************** Contact Section End ******************************** -->
+      <!--  Contact Section End ######################################## -->
     </main>
+
     <footer>
-      <!-- ******************************** Footer Section Start ******************************** -->
+      <!--  Footer Section Start *************************************** -->
       <section class="footer-section">
         <p>Abid Shahriar &copy; 2020</p>
-        <p>Feel Free to use my codes.<br>
-          <a href="https://github.com/abid-shahriar?tab=repositories">github-repository</a>
+        <p>
+          Feel Free to use my codes.<br />
+          <a href="https://github.com/abid-shahriar?tab=repositories"
+            >github-repository</a
+          >
         </p>
-
       </section>
-      <!-- ******************************** Footer Section End ******************************** -->
+      <!--  Footer Section End ####################################### -->
     </footer>
 
+    <!--  top button start ******************************************* -->
+    <div class="top-btn">
+      <a href="#">&uarr;</a>
+    </div>
+    <!--  top button end ############################################# -->
 
-      <!-- ******************************** top button start ******************************** -->
-      <div class="top-btn">
-        <a href="#">&uarr;</a>
-      </div>
-      <!-- ******************************** top button end ******************************** -->
-
-    <!-- javaScript -->
+    <!-- javaScript Start ******************************************** -->
     <script>
       (function rocketFly() {
         let container = document.querySelector(".preloader-container");
@@ -524,15 +646,14 @@
           i++;
         }
       })();
-    </script>
 
-    <script>
-      function preLoader(){
+      function preLoader() {
         let preLoader = document.querySelector(".preloader-container");
-            setTimeout(() => {
-              preLoader.classList.add("hide");   
-            }, 1000);  
+        setTimeout(() => {
+          preLoader.classList.add("hide");
+        }, 1000);
       }
     </script>
+    <!-- javaScript End ******************************************** -->
   </body>
 </html>

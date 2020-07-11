@@ -1,3 +1,4 @@
+// Base Styles Start *****************************************
 *,
 *::after,
 *::before {
@@ -29,7 +30,6 @@ html {
 
 body {
   font-family: "Raleway", sans-serif;
-  // background-color: #020d19;
   overflow-x: hidden;
 }
 
@@ -46,3 +46,4 @@ body {
   color: black;
   background-color: var(--highlight);
 }
+// Base Styles Start ###########################################
