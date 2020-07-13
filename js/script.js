@@ -85,14 +85,14 @@ if (currentWidth <= 900) {
 //   messageSentBox.classList.add("active");
 // }
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  messageSentBox.classList.remove("inactive");
-  messageSentBox.classList.add("active");
-});
+// form.addEventListener("submit", (e) => {
+//   messageSentBox.classList.remove("inactive");
+//   messageSentBox.classList.add("active");
+//   e.preventDefault();
+// });
 
-messageSentBtn.addEventListener("click", (e) => {
-  messageSentBox.classList.remove("active");
-  messageSentBox.classList.add("inactive");
-  form.reset();
-});
+// messageSentBtn.addEventListener("click", (e) => {
+//   messageSentBox.classList.remove("active");
+//   messageSentBox.classList.add("inactive");
+//   form.reset();
+// });
