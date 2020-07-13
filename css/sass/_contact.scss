@@ -212,4 +212,53 @@
   }
 }
 
+.message-received {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  @include flexCenter;
+
+  &.inactive {
+    transform: scale(0);
+    pointer-events: none;
+  }
+
+  &.active {
+    transform: scale(1);
+    pointer-events: all;
+  }
+
+  .content {
+    background-color: #0f2027;
+    padding: 4rem 4rem;
+    border-radius: 5px;
+    @include flexCenter;
+    flex-direction: column;
+    position: relative;
+    font-size: 1.6rem;
+    color: white;
+    h1 {
+      text-align: center;
+      font-weight: 500;
+    }
+
+    button {
+      margin-top: 2rem;
+      padding: 0.5rem 1rem;
+      display: block;
+      text-align: right;
+      font-size: 1.8rem;
+      background-color: rgb(14, 190, 37);
+      border-radius: 5px;
+      outline: none;
+      border: 1px solid rgba(0, 0, 0, 0.685);
+      cursor: pointer;
+    }
+  }
+}
+
 // Contact Section Styles End #############################################

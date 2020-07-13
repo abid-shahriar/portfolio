@@ -6,6 +6,14 @@ const header = document.querySelector("header");
 const nav = document.querySelector("nav");
 const navContainer = document.querySelector(".nav-container");
 const meImg = document.querySelector(".about__grid--left figure img");
+const submitBtn = document.getElementById("submit-btn");
+const messageSentBox = document.getElementById("message-received");
+const messageSentBtn = document.getElementById("message-sent-btn");
+const form = document.getElementById("form");
+
+console.log(messageSentBox);
+console.log(submitBtn);
+console.log(form);
 
 // Toggle Function******************************************************
 navToggle.addEventListener("click", () => {
@@ -68,3 +76,23 @@ if (currentWidth <= 900) {
 } else {
   meImg.src = "./img/me.jpg";
 }
+
+// Form Submission ********************************************
+// function messageSent() {
+//   // e.preventDefault();
+
+//   messageSentBox.classList.remove("inactive");
+//   messageSentBox.classList.add("active");
+// }
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  messageSentBox.classList.remove("inactive");
+  messageSentBox.classList.add("active");
+});
+
+messageSentBtn.addEventListener("click", (e) => {
+  messageSentBox.classList.remove("active");
+  messageSentBox.classList.add("inactive");
+  form.reset();
+});

@@ -158,7 +158,7 @@
   </head>
   <body onload="preLoader()">
     <!-- Preloader Start **********************************-->
-    <div class="preloader-container" id="preloader">
+    <div class="preloader-container" id="preloader" style="display: none;">
       <div class="rocket">
         <img src="./img/rocket.svg" alt="rocket" />
       </div>
@@ -553,7 +553,7 @@
         <span class="small-dash"></span>
         <div class="contact-box">
           <div class="message-box">
-            <form action="" netlify>
+            <form action="" id="form" netlify>
               <input name="name" type="text" placeholder="Name" required />
               <input
                 name="email"
@@ -569,8 +569,17 @@
                 placeholder="Your Message"
                 required
               ></textarea>
-              <input type="submit" placeholder="Send" />
+              <input id="submit-btn" type="submit" placeholder="Send" />
             </form>
+            <div class="message-received inactive" id="message-received">
+              <div class="content">
+                <h1>
+                  Thank you <br />
+                  message has been sent..!!
+                </h1>
+                <button id="message-sent-btn">Close</button>
+              </div>
+            </div>
           </div>
 
           <div class="findme-box">
