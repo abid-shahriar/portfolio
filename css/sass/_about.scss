@@ -12,6 +12,8 @@
 
   .about {
     width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
     height: auto;
     background-color: transparent;
     display: grid;
@@ -39,6 +41,7 @@
     box-shadow: var(--shadow);
 
     figure {
+      width: 100%;
       text-align: center;
       color: var(--white);
       img {
